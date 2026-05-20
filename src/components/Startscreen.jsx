@@ -5,13 +5,14 @@ function StartScreen({ onStart, isGameOver, score }) {
       flexDirection: 'column',
       alignItems: 'center',
       gap: '20px',
+      animation: 'fadeIn 0.5s ease-out',
     }}>
       <h1 style={{ color: '#00ff88', fontFamily: 'monospace', fontSize: '40px' }}>
         SNAKE
       </h1>
 
       {isGameOver && (
-        <div style={{ textAlign: 'center' }}>
+        <div style={{ textAlign: 'center', animation: 'fadeIn 0.3s ease-out' }}>
           <p style={{ color: '#ff3860', fontFamily: 'monospace', fontSize: '24px' }}>
             GAME OVER
           </p>
@@ -31,7 +32,10 @@ function StartScreen({ onStart, isGameOver, score }) {
           fontSize: '16px',
           padding: '10px 30px',
           cursor: 'pointer',
+          transition: 'all 0.2s ease',
         }}
+        onMouseEnter={e => e.target.style.backgroundColor = 'rgba(0,255,136,0.1)'}
+        onMouseLeave={e => e.target.style.backgroundColor = 'transparent'}
       >
         {isGameOver ? 'JUGAR DE NUEVO' : 'JUGAR'}
       </button>

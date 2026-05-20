@@ -9,6 +9,7 @@ function Food({ position }) {
         height: 20,
         backgroundColor: '#ff3860',
         borderRadius: '50%',
+        animation: 'pulse 1s ease-in-out infinite',
       }}
     />
   )
