@@ -1,9 +1,7 @@
 import Snake from './Snake'
 import Food from './Food'
 
-const FOOD_POSITION = { x: 15, y: 10 }
-
-function Board({ snake }) {
+function Board({ snake, food }) {
   return (
     <div style={{
       width: '400px',
@@ -13,7 +11,7 @@ function Board({ snake }) {
       position: 'relative',
     }}>
       <Snake segments={snake} />
-      <Food position={FOOD_POSITION} />
+      <Food position={food} />
     </div>
   )
 }
